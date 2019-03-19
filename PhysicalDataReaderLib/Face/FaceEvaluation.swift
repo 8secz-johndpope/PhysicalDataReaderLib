@@ -46,7 +46,7 @@ class FaceEvaluation {
     }
 }
 
-struct FaceEvaluationData {
+public struct FaceEvaluationData {
     var totalExpressions: Int?
     var mostUsed: String?
     var counts: [String: Int]?

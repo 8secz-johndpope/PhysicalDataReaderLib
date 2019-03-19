@@ -8,32 +8,32 @@
 import ARKit
 import Foundation
 
-protocol FaceDelegate: class {
+public protocol FaceDelegate: class {
     func detectExpression(expression: String) 
     func didDetectFace(detected: Bool)
 }
 
-class FaceController: NSObject {
+public class FaceController: NSObject {
     
     private weak var faceDelegate: FaceDelegate?
     private var evaluator:FaceEvaluation!
     private var reader = FaceReader ()
     private var session: ARSession!
     
-    func setup(delegate: FaceDelegate) {
+    public func setup(delegate: FaceDelegate) {
         self.session = ARSession()
         self.session.delegate = self
         self.faceDelegate = delegate
     }
     
-    func startSession() {
+     public func startSession() {
         self.evaluator = FaceEvaluation()
         guard ARFaceTrackingConfiguration.isSupported else { print("Get True Depth noob" ); return }
         let configuration = ARFaceTrackingConfiguration()
         self.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
     
-    func stopSession() -> FaceEvaluationData {
+     public func stopSession() -> FaceEvaluationData {
         self.session.pause()
         return self.evaluator.evaluateSession()
     }
