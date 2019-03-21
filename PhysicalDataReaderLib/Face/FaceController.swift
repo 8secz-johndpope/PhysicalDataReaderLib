@@ -5,8 +5,11 @@
 //  Created by Oliver Larsen on 26/02/2019.
 //  Copyright © 2019 amsiq. All rights reserved.
 //
+#if canImport(ARKit)
 import ARKit
+
 import Foundation
+
 
 public protocol FaceDelegate: class {
     func detectExpression(expression: String) 
@@ -39,6 +42,7 @@ public class FaceController: NSObject {
     }
 }
     // MARK: ARSession Delegate
+
     extension FaceController: ARSessionDelegate {
         
        public func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
@@ -53,6 +57,6 @@ public class FaceController: NSObject {
         
             self.faceDelegate?.didDetectFace(detected: isFaceTracked)
         }
-    
-
+  
     }
+#endif

@@ -18,7 +18,7 @@ class HeartRateEvaluation {
             averageHR: self.getAverageHeartRate(),
             increaseHR: self.getIncreaseInHr()
         )
-        return evaluationData 
+        return evaluationData
         
     }
     
@@ -41,7 +41,7 @@ class HeartRateEvaluation {
     }
     
 }
-struct HeartEvaluationData {
+public struct HeartEvaluationData {
     var averageHR: Int?
     var increaseHR: Int?
 }

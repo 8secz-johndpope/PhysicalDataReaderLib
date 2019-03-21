@@ -5,7 +5,10 @@
 //  Created by Oliver Larsen on 12/02/2019.
 //  Copyright © 2019 amsiq. All rights reserved.
 //
+#if canImport(ARKit)
 import ARKit
+
+
 import Foundation
 
 class FaceReader: NSObject {
@@ -62,3 +65,4 @@ class FaceReader: NSObject {
         return frownLeft.floatValue > FROWN_LEFT_VALUE && frownRight.floatValue > FROWN_RIGHT_VALUE
     }
 }
+#endif

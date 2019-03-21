@@ -5,12 +5,12 @@
 //  Created by Oliver Larsen on 12/03/2019.
 //  Copyright © 2019 amsiq. All rights reserved.
 //
-
+#if os(iOS)
 import Foundation
 import WatchConnectivity
 import WatchKit
 
-protocol WatchReaderDelegate: class {
+public protocol WatchReaderDelegate: class {
     func didGetHeartRate(hr: Int)
 }
 
@@ -50,9 +50,10 @@ extension WatchController: WCSessionDelegate {
             self.watchDelegate?.didGetHeartRate(hr: received)
         }
     }
-    
-    func sessionDidBecomeInactive(_ session: WCSession) { }
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
-    func sessionDidDeactivate(_ session: WCSession) { }
-    
+
+    public func sessionDidBecomeInactive(_ session: WCSession) { }
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
+    public func sessionDidDeactivate(_ session: WCSession) { }
+   
 }
+#endif
