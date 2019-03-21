@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		43E1668B2243A2C1000251E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E1668A2243A2C1000251E0 /* HealthKit.framework */; };
+		43E166952243B1BB000251E0 /* WatchLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 43E166932243B1BB000251E0 /* WatchLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43E166982243B1BB000251E0 /* WatchLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E166912243B1BB000251E0 /* WatchLib.framework */; };
+		43E166992243B1BB000251E0 /* WatchLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43E166912243B1BB000251E0 /* WatchLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		43E1669F2243B1DB000251E0 /* WatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1669E2243B1DB000251E0 /* WatchController.swift */; };
+		43E166A12243B1DF000251E0 /* HeartRateEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E166A02243B1DF000251E0 /* HeartRateEvaluation.swift */; };
 		43F820EF223FAF4C00F2245A /* PhysicalDataReaderLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F820E5223FAF4B00F2245A /* PhysicalDataReaderLib.framework */; };
 		43F820F6223FAF4C00F2245A /* PhysicalDataReaderLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F820E8223FAF4B00F2245A /* PhysicalDataReaderLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43F8211B223FB03E00F2245A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F82119223FB03E00F2245A /* Interface.storyboard */; };
@@ -26,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		43E166962243B1BB000251E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43F820DC223FAF4B00F2245A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43E166902243B1BB000251E0;
+			remoteInfo = WatchLib;
+		};
 		43F820F0223FAF4C00F2245A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 43F820DC223FAF4B00F2245A /* Project object */;
@@ -50,6 +62,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		43E1669D2243B1BC000251E0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				43E166992243B1BB000251E0 /* WatchLib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43F82138223FB03F00F2245A /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,6 +100,11 @@
 /* Begin PBXFileReference section */
 		43E166892243A2C1000251E0 /* PhysicalDataReaderExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = PhysicalDataReaderExample.entitlements; path = PhysicalDataReaderExample/PhysicalDataReaderExample.entitlements; sourceTree = "<group>"; };
 		43E1668A2243A2C1000251E0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		43E166912243B1BB000251E0 /* WatchLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43E166932243B1BB000251E0 /* WatchLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchLib.h; sourceTree = "<group>"; };
+		43E166942243B1BB000251E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43E1669E2243B1DB000251E0 /* WatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchController.swift; sourceTree = "<group>"; };
+		43E166A02243B1DF000251E0 /* HeartRateEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateEvaluation.swift; sourceTree = "<group>"; };
 		43F820E5223FAF4B00F2245A /* PhysicalDataReaderLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhysicalDataReaderLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F820E8223FAF4B00F2245A /* PhysicalDataReaderLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicalDataReaderLib.h; sourceTree = "<group>"; };
 		43F820E9223FAF4B00F2245A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +128,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		43E1668E2243B1BB000251E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43F820E2223FAF4B00F2245A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E166982243B1BB000251E0 /* WatchLib.framework in Frameworks */,
 				43F82142223FB08600F2245A /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,6 +170,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43E166922243B1BB000251E0 /* WatchLib */ = {
+			isa = PBXGroup;
+			children = (
+				43E166A02243B1DF000251E0 /* HeartRateEvaluation.swift */,
+				43E1669E2243B1DB000251E0 /* WatchController.swift */,
+				43E166932243B1BB000251E0 /* WatchLib.h */,
+				43E166942243B1BB000251E0 /* Info.plist */,
+			);
+			path = WatchLib;
+			sourceTree = "<group>";
+		};
 		43F820DB223FAF4B00F2245A = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +188,7 @@
 				43F820E7223FAF4B00F2245A /* PhysicalDataReaderLib */,
 				43F82118223FB03E00F2245A /* WatchExample */,
 				43F82127223FB03F00F2245A /* WatchExample Extension */,
+				43E166922243B1BB000251E0 /* WatchLib */,
 				43F820E6223FAF4B00F2245A /* Products */,
 				43F8213E223FB07B00F2245A /* Frameworks */,
 			);
@@ -154,6 +202,7 @@
 				43F82103223FAFD700F2245A /* PhysicalDataReaderExample.app */,
 				43F82117223FB03E00F2245A /* WatchExample.app */,
 				43F82123223FB03E00F2245A /* WatchExample Extension.appex */,
+				43E166912243B1BB000251E0 /* WatchLib.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -205,6 +254,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		43E1668C2243B1BB000251E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43E166952243B1BB000251E0 /* WatchLib.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43F820E0223FAF4B00F2245A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +273,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		43E166902243B1BB000251E0 /* WatchLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43E1669A2243B1BC000251E0 /* Build configuration list for PBXNativeTarget "WatchLib" */;
+			buildPhases = (
+				43E1668C2243B1BB000251E0 /* Headers */,
+				43E1668D2243B1BB000251E0 /* Sources */,
+				43E1668E2243B1BB000251E0 /* Frameworks */,
+				43E1668F2243B1BB000251E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WatchLib;
+			productName = WatchLib;
+			productReference = 43E166912243B1BB000251E0 /* WatchLib.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		43F820E4223FAF4B00F2245A /* PhysicalDataReaderLib */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43F820F9223FAF4C00F2245A /* Build configuration list for PBXNativeTarget "PhysicalDataReaderLib" */;
@@ -295,10 +370,12 @@
 				43F8211F223FB03E00F2245A /* Sources */,
 				43F82120223FB03E00F2245A /* Frameworks */,
 				43F82121223FB03E00F2245A /* Resources */,
+				43E1669D2243B1BC000251E0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				43E166972243B1BB000251E0 /* PBXTargetDependency */,
 			);
 			name = "WatchExample Extension";
 			productName = "WatchExample Extension";
@@ -315,6 +392,9 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Amsiq;
 				TargetAttributes = {
+					43E166902243B1BB000251E0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					43F820E4223FAF4B00F2245A = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -363,11 +443,19 @@
 				43F82102223FAFD700F2245A /* PhysicalDataReaderExample */,
 				43F82116223FB03E00F2245A /* WatchExample */,
 				43F82122223FB03E00F2245A /* WatchExample Extension */,
+				43E166902243B1BB000251E0 /* WatchLib */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		43E1668F2243B1BB000251E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43F820E3223FAF4B00F2245A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,6 +501,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		43E1668D2243B1BB000251E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43E166A12243B1DF000251E0 /* HeartRateEvaluation.swift in Sources */,
+				43E1669F2243B1DB000251E0 /* WatchController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		43F820E1223FAF4B00F2245A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -447,6 +544,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		43E166972243B1BB000251E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43E166902243B1BB000251E0 /* WatchLib */;
+			targetProxy = 43E166962243B1BB000251E0 /* PBXContainerItemProxy */;
+		};
 		43F820F1223FAF4C00F2245A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 43F820E4223FAF4B00F2245A /* PhysicalDataReaderLib */;
@@ -476,6 +578,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		43E1669B2243B1BC000251E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N426KG972D;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WatchLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Amsiq.WatchLib;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		43E1669C2243B1BC000251E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N426KG972D;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WatchLib/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Amsiq.WatchLib;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
 		43F820F7223FAF4C00F2245A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -809,6 +967,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		43E1669A2243B1BC000251E0 /* Build configuration list for PBXNativeTarget "WatchLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43E1669B2243B1BC000251E0 /* Debug */,
+				43E1669C2243B1BC000251E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		43F820DF223FAF4B00F2245A /* Build configuration list for PBXProject "PhysicalDataReaderLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
