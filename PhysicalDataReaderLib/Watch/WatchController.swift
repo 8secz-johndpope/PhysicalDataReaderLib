@@ -14,13 +14,13 @@ protocol WatchReaderDelegate: class {
     func didGetHeartRate(hr: Int)
 }
 
-class WatchController: NSObject {
+public class WatchController: NSObject {
 
     private var session: WCSession!
     private var evaluator: HeartRateEvaluation!
     private weak var watchDelegate: WatchReaderDelegate?
    
-    func setup(delegate: WatchReaderDelegate) {
+    public func setup(delegate: WatchReaderDelegate) {
         
         if WCSession.isSupported() {
             self.session = WCSession.default
@@ -30,12 +30,12 @@ class WatchController: NSObject {
         }
     }
     
-    func startListeningForHR() {
+    public func startListeningForHR() {
         self.evaluator = HeartRateEvaluation()
         self.session.sendMessage(["Start":"get hr"], replyHandler: nil, errorHandler: nil)
     }
     
-    func stopHR() -> HeartEvaluationData {
+   public func stopHR() -> HeartEvaluationData {
         self.session.sendMessage(["End":"stop hr"], replyHandler: nil, errorHandler: nil)
         return self.evaluator.evaluateSession()
     }
@@ -43,7 +43,7 @@ class WatchController: NSObject {
 
 extension WatchController: WCSessionDelegate {
     
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+    public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         
         if let received = message["HeartRate"] as? Int {
             self.evaluator.heartRates.append(received)

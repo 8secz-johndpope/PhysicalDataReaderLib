@@ -20,10 +20,6 @@ class FaceEvaluation {
         if specialCases.contains(expression) && specialCases.contains(self.lastExpression ?? .not_determined) {
             return
         }
-//
-//        if expression == .winking && self.lastExpression == .winking {
-//            return
-//        }
         
         self.counts[expression.rawValue, default: 0] += 1
         self.totalCount += 1
@@ -41,7 +37,6 @@ class FaceEvaluation {
     }
     
     private func specialExpression() -> Bool {
-    
         return false
     }
 }
@@ -51,7 +46,7 @@ public struct FaceEvaluationData {
     var mostUsed: String?
     var counts: [String: Int]?
     
-    func getNumberOfExpression(expression: FaceState, percentage:Bool) -> Int? {
+   public func getNumberOfExpression(expression: FaceState, percentage:Bool) -> Int? {
         if let counts = self.counts, let value = counts[expression.rawValue], let total = self.totalExpressions {
              return percentage ? getPercentage(value, total) : value
         } else { return 0 }

@@ -41,36 +41,18 @@ public class FaceController: NSObject {
     // MARK: ARSession Delegate
     extension FaceController: ARSessionDelegate {
         
-        func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
+       public func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
             let result = self.reader.intelligentFaceDecoding(anchors: anchors)
             
             self.evaluator.addExpression(expression: result)
             self.faceDelegate?.detectExpression(expression: result.rawValue)
         }
         
-        func session(_ session: ARSession, didUpdate frame: ARFrame) {
+       public func session(_ session: ARSession, didUpdate frame: ARFrame) {
              let isFaceTracked = self.reader.isFaceTracked()
-            
+        
             self.faceDelegate?.didDetectFace(detected: isFaceTracked)
         }
-        
-        func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-            
-        }
-        
-        func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-            debugPrint("changedstate")
-        }
-        
-        func sessionWasInterrupted(_ session: ARSession) {
-            debugPrint("stop")
-        }
-        
-        func sessionInterruptionEnded(_ session: ARSession) {
-            debugPrint("ended")
-        }
-        
-        func session(_ session: ARSession, didRemove anchors: [ARAnchor]) {
-            debugPrint("anchor removed")
-        }
+    
+
     }
