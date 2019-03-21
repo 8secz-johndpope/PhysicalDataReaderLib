@@ -37,7 +37,7 @@ class FaceEvaluation {
     }
     
     private func specialExpression() -> Bool {
-        return false
+        return true
     }
 }
 

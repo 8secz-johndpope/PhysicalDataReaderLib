@@ -14,7 +14,7 @@ import Foundation
 class FaceReader: NSObject {
     
     private var face: ARFaceAnchor?
- 
+ //test
     func intelligentFaceDecoding(anchors: [ARAnchor]) -> FaceState {
     
         if let faceAnchor = anchors.first as? ARFaceAnchor { self.face = faceAnchor }
