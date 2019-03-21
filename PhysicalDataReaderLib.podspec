@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PhysicalDataReaderLib"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "My awesome pod."
 
   # This description is used to generate tags and improve search results.
@@ -70,7 +70,7 @@ Pod::Spec.new do |spec|
    spec.ios.deployment_target = "12.1"
    spec.swift_version = "4.2"
   # spec.osx.deployment_target = "10.7"
-  # spec.watchos.deployment_target = "2.0"
+    spec.watchos.deployment_target = "4.0"
   # spec.tvos.deployment_target = "9.0"
 
 

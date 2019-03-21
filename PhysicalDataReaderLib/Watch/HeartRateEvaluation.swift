@@ -18,7 +18,7 @@ class HeartRateEvaluation {
             averageHR: self.getAverageHeartRate(),
             increaseHR: self.getIncreaseInHr()
         )
-        return evaluationData
+        return evaluationData 
         
     }
     
