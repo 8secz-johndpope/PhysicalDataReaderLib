@@ -5,14 +5,15 @@
 //  Created by Oliver Larsen on 07/03/2019.
 //  Copyright © 2019 amsiq. All rights reserved.
 //
+#if os(watchOS)
 import Foundation
 import HealthKit
 
-protocol SessionManagerDelegate: class {
+public protocol SessionManagerDelegate: class {
     func sessionManager(_ manager: SessionManager, didChangeHeartRateTo newHeartRate: Double)
 }
 
-class SessionManager: NSObject {
+public class SessionManager: NSObject {
     
     private let healthStore = HKHealthStore()
     private let heartRateProvider = HeartRateProvider()
@@ -45,8 +46,9 @@ class SessionManager: NSObject {
 }
 // MARK: - Heart Rate Delegate
 extension SessionManager: HeartRateProviderDelegate {
-    func heartRate(didChangeTo newHeartRate: Double) {
+   public func heartRate(didChangeTo newHeartRate: Double) {
        self.delegate?.sessionManager(self, didChangeHeartRateTo: newHeartRate)
     }
     
 }
+#endif

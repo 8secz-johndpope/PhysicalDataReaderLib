@@ -10,7 +10,6 @@
 		43E1668B2243A2C1000251E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E1668A2243A2C1000251E0 /* HealthKit.framework */; };
 		43E166982243B1BB000251E0 /* WatchLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E166912243B1BB000251E0 /* WatchLib.framework */; };
 		43E166992243B1BB000251E0 /* WatchLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43E166912243B1BB000251E0 /* WatchLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		43E1669F2243B1DB000251E0 /* WatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43E1669E2243B1DB000251E0 /* WatchController.swift */; };
 		43F820EF223FAF4C00F2245A /* PhysicalDataReaderLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F820E5223FAF4B00F2245A /* PhysicalDataReaderLib.framework */; };
 		43F820F6223FAF4C00F2245A /* PhysicalDataReaderLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F820E8223FAF4B00F2245A /* PhysicalDataReaderLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43F8211B223FB03E00F2245A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F82119223FB03E00F2245A /* Interface.storyboard */; };
@@ -100,7 +99,6 @@
 		43E1668A2243A2C1000251E0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		43E166912243B1BB000251E0 /* WatchLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E166942243B1BB000251E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43E1669E2243B1DB000251E0 /* WatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchController.swift; sourceTree = "<group>"; };
 		43F820E5223FAF4B00F2245A /* PhysicalDataReaderLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhysicalDataReaderLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F820E8223FAF4B00F2245A /* PhysicalDataReaderLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicalDataReaderLib.h; sourceTree = "<group>"; };
 		43F820E9223FAF4B00F2245A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 		43E166922243B1BB000251E0 /* WatchLib */ = {
 			isa = PBXGroup;
 			children = (
-				43E1669E2243B1DB000251E0 /* WatchController.swift */,
 				43E166942243B1BB000251E0 /* Info.plist */,
 			);
 			path = WatchLib;
@@ -498,7 +495,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43E1669F2243B1DB000251E0 /* WatchController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

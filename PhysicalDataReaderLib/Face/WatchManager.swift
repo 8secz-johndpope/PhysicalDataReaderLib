@@ -5,15 +5,15 @@
 //  Created by Oliver Larsen on 18/03/2019.
 //  Copyright © 2019 amsiq. All rights reserved.
 //
-
+#if os(watchOS)
 import Foundation
 import WatchConnectivity
 import WatchKit
 
-protocol WatchManagerDelegate: class {
+public protocol WatchManagerDelegate: class {
     func getLatestHeartRate(newHeartRate: Double)
 }
-class WatchManager: NSObject {
+public class WatchManager: NSObject {
     
     private weak var delegate: WatchManagerDelegate?
     private var session = WCSession.default
@@ -39,16 +39,16 @@ class WatchManager: NSObject {
 }
 extension WatchManager: SessionManagerDelegate {
     
-    func sessionManager(_ manager: SessionManager, didChangeHeartRateTo newHeartRate: Double) {
+   public func sessionManager(_ manager: SessionManager, didChangeHeartRateTo newHeartRate: Double) {
         self.sendToApp(count: newHeartRate)
         self.delegate?.getLatestHeartRate(newHeartRate: newHeartRate)
     }
 }
 
 extension WatchManager: WCSessionDelegate {
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
     
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+    public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         if let message = message["Start"] as? String {
             self.sessionManager.start()
             print("hello  \(message)")
@@ -59,3 +59,4 @@ extension WatchManager: WCSessionDelegate {
     }
     
 }
+#endif
