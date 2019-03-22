@@ -7,24 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430F1B812244EE5B008C26F0 /* FaceEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1B7C2244EE5A008C26F0 /* FaceEvaluation.swift */; };
+		430F1B822244EE5B008C26F0 /* FaceReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1B7D2244EE5A008C26F0 /* FaceReader.swift */; };
+		430F1B832244EE5B008C26F0 /* FaceValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1B7E2244EE5A008C26F0 /* FaceValues.swift */; };
+		430F1B842244EE5B008C26F0 /* FaceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1B7F2244EE5B008C26F0 /* FaceState.swift */; };
+		430F1B852244EE5B008C26F0 /* FaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1B802244EE5B008C26F0 /* FaceController.swift */; };
+		430F1B872244EE5F008C26F0 /* OverallEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1B862244EE5F008C26F0 /* OverallEvaluation.swift */; };
+		430F1B8E2244EE73008C26F0 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1B882244EE73008C26F0 /* WatchManager.swift */; };
+		430F1B8F2244EE73008C26F0 /* HeartRateEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1B892244EE73008C26F0 /* HeartRateEvaluation.swift */; };
+		430F1B902244EE73008C26F0 /* WatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1B8A2244EE73008C26F0 /* WatchController.swift */; };
+		430F1B912244EE73008C26F0 /* HeartRateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1B8B2244EE73008C26F0 /* HeartRateProvider.swift */; };
+		430F1B922244EE73008C26F0 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430F1B8D2244EE73008C26F0 /* SessionManager.swift */; };
 		43E1668B2243A2C1000251E0 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E1668A2243A2C1000251E0 /* HealthKit.framework */; };
 		43E166982243B1BB000251E0 /* WatchLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E166912243B1BB000251E0 /* WatchLib.framework */; };
 		43E166992243B1BB000251E0 /* WatchLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43E166912243B1BB000251E0 /* WatchLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43F820EF223FAF4C00F2245A /* PhysicalDataReaderLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F820E5223FAF4B00F2245A /* PhysicalDataReaderLib.framework */; };
 		43F820F6223FAF4C00F2245A /* PhysicalDataReaderLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F820E8223FAF4B00F2245A /* PhysicalDataReaderLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		43F8211B223FB03E00F2245A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F82119223FB03E00F2245A /* Interface.storyboard */; };
-		43F8211D223FB03E00F2245A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F8211C223FB03E00F2245A /* Assets.xcassets */; };
 		43F82124223FB03E00F2245A /* WatchExample Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 43F82123223FB03E00F2245A /* WatchExample Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		43F82129223FB03F00F2245A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F82128223FB03F00F2245A /* InterfaceController.swift */; };
-		43F8212B223FB03F00F2245A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F8212A223FB03F00F2245A /* ExtensionDelegate.swift */; };
-		43F8212D223FB03F00F2245A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F8212C223FB03F00F2245A /* NotificationController.swift */; };
-		43F8212F223FB03F00F2245A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F8212E223FB03F00F2245A /* Assets.xcassets */; };
 		43F82134223FB03F00F2245A /* WatchExample.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 43F82117223FB03E00F2245A /* WatchExample.app */; };
 		43F82142223FB08600F2245A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F82141223FB08600F2245A /* HealthKit.framework */; };
-		43F82144223FB44500F2245A /* Face in Resources */ = {isa = PBXBuildFile; fileRef = 43F82143223FB44500F2245A /* Face */; };
-		43F82146223FB45B00F2245A /* Watch in Resources */ = {isa = PBXBuildFile; fileRef = 43F82145223FB45B00F2245A /* Watch */; };
-		43F82151223FB73D00F2245A /* Watch in Resources */ = {isa = PBXBuildFile; fileRef = 43F82145223FB45B00F2245A /* Watch */; };
-		43F82152223FB74000F2245A /* Face in Resources */ = {isa = PBXBuildFile; fileRef = 43F82143223FB44500F2245A /* Face */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,30 +96,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		430F1B7C2244EE5A008C26F0 /* FaceEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceEvaluation.swift; sourceTree = "<group>"; };
+		430F1B7D2244EE5A008C26F0 /* FaceReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceReader.swift; sourceTree = "<group>"; };
+		430F1B7E2244EE5A008C26F0 /* FaceValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceValues.swift; sourceTree = "<group>"; };
+		430F1B7F2244EE5B008C26F0 /* FaceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceState.swift; sourceTree = "<group>"; };
+		430F1B802244EE5B008C26F0 /* FaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceController.swift; sourceTree = "<group>"; };
+		430F1B862244EE5F008C26F0 /* OverallEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallEvaluation.swift; sourceTree = "<group>"; };
+		430F1B882244EE73008C26F0 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
+		430F1B892244EE73008C26F0 /* HeartRateEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateEvaluation.swift; sourceTree = "<group>"; };
+		430F1B8A2244EE73008C26F0 /* WatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchController.swift; sourceTree = "<group>"; };
+		430F1B8B2244EE73008C26F0 /* HeartRateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateProvider.swift; sourceTree = "<group>"; };
+		430F1B8C2244EE73008C26F0 /* PhysicalDataReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhysicalDataReader.entitlements; sourceTree = "<group>"; };
+		430F1B8D2244EE73008C26F0 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		43E166892243A2C1000251E0 /* PhysicalDataReaderExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = PhysicalDataReaderExample.entitlements; path = PhysicalDataReaderExample/PhysicalDataReaderExample.entitlements; sourceTree = "<group>"; };
 		43E1668A2243A2C1000251E0 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		43E166912243B1BB000251E0 /* WatchLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		43E166942243B1BB000251E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43F820E5223FAF4B00F2245A /* PhysicalDataReaderLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PhysicalDataReaderLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F820E8223FAF4B00F2245A /* PhysicalDataReaderLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicalDataReaderLib.h; sourceTree = "<group>"; };
 		43F820E9223FAF4B00F2245A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43F820EE223FAF4C00F2245A /* PhysicalDataReaderLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhysicalDataReaderLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F82103223FAFD700F2245A /* PhysicalDataReaderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhysicalDataReaderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F82117223FB03E00F2245A /* WatchExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		43F8211A223FB03E00F2245A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		43F8211C223FB03E00F2245A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		43F8211E223FB03E00F2245A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43F82123223FB03E00F2245A /* WatchExample Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchExample Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		43F82128223FB03F00F2245A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		43F8212A223FB03F00F2245A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		43F8212C223FB03F00F2245A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		43F8212E223FB03F00F2245A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		43F82130223FB03F00F2245A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		43F82131223FB03F00F2245A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		43F8213D223FB07B00F2245A /* WatchExample Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchExample Extension.entitlements"; sourceTree = "<group>"; };
 		43F82141223FB08600F2245A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
-		43F82143223FB44500F2245A /* Face */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Face; sourceTree = "<group>"; };
-		43F82145223FB45B00F2245A /* Watch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Watch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,22 +164,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		43E166922243B1BB000251E0 /* WatchLib */ = {
-			isa = PBXGroup;
-			children = (
-				43E166942243B1BB000251E0 /* Info.plist */,
-			);
-			path = WatchLib;
-			sourceTree = "<group>";
-		};
 		43F820DB223FAF4B00F2245A = {
 			isa = PBXGroup;
 			children = (
 				43E166892243A2C1000251E0 /* PhysicalDataReaderExample.entitlements */,
 				43F820E7223FAF4B00F2245A /* PhysicalDataReaderLib */,
-				43F82118223FB03E00F2245A /* WatchExample */,
-				43F82127223FB03F00F2245A /* WatchExample Extension */,
-				43E166922243B1BB000251E0 /* WatchLib */,
 				43F820E6223FAF4B00F2245A /* Products */,
 				43F8213E223FB07B00F2245A /* Frameworks */,
 			);
@@ -201,36 +190,22 @@
 		43F820E7223FAF4B00F2245A /* PhysicalDataReaderLib */ = {
 			isa = PBXGroup;
 			children = (
-				43F82145223FB45B00F2245A /* Watch */,
-				43F82143223FB44500F2245A /* Face */,
+				430F1B802244EE5B008C26F0 /* FaceController.swift */,
+				430F1B7C2244EE5A008C26F0 /* FaceEvaluation.swift */,
+				430F1B7D2244EE5A008C26F0 /* FaceReader.swift */,
+				430F1B7F2244EE5B008C26F0 /* FaceState.swift */,
+				430F1B7E2244EE5A008C26F0 /* FaceValues.swift */,
+				430F1B862244EE5F008C26F0 /* OverallEvaluation.swift */,
+				430F1B892244EE73008C26F0 /* HeartRateEvaluation.swift */,
+				430F1B8B2244EE73008C26F0 /* HeartRateProvider.swift */,
+				430F1B8C2244EE73008C26F0 /* PhysicalDataReader.entitlements */,
+				430F1B8D2244EE73008C26F0 /* SessionManager.swift */,
+				430F1B8A2244EE73008C26F0 /* WatchController.swift */,
+				430F1B882244EE73008C26F0 /* WatchManager.swift */,
 				43F820E8223FAF4B00F2245A /* PhysicalDataReaderLib.h */,
 				43F820E9223FAF4B00F2245A /* Info.plist */,
 			);
 			path = PhysicalDataReaderLib;
-			sourceTree = "<group>";
-		};
-		43F82118223FB03E00F2245A /* WatchExample */ = {
-			isa = PBXGroup;
-			children = (
-				43F82119223FB03E00F2245A /* Interface.storyboard */,
-				43F8211C223FB03E00F2245A /* Assets.xcassets */,
-				43F8211E223FB03E00F2245A /* Info.plist */,
-			);
-			path = WatchExample;
-			sourceTree = "<group>";
-		};
-		43F82127223FB03F00F2245A /* WatchExample Extension */ = {
-			isa = PBXGroup;
-			children = (
-				43F8213D223FB07B00F2245A /* WatchExample Extension.entitlements */,
-				43F82128223FB03F00F2245A /* InterfaceController.swift */,
-				43F8212A223FB03F00F2245A /* ExtensionDelegate.swift */,
-				43F8212C223FB03F00F2245A /* NotificationController.swift */,
-				43F8212E223FB03F00F2245A /* Assets.xcassets */,
-				43F82130223FB03F00F2245A /* Info.plist */,
-				43F82131223FB03F00F2245A /* PushNotificationPayload.apns */,
-			);
-			path = "WatchExample Extension";
 			sourceTree = "<group>";
 		};
 		43F8213E223FB07B00F2245A /* Frameworks */ = {
@@ -387,6 +362,7 @@
 					};
 					43F820E4223FAF4B00F2245A = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					43F820ED223FAF4C00F2245A = {
 						CreatedOnToolsVersion = 10.1;
@@ -450,8 +426,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43F82146223FB45B00F2245A /* Watch in Resources */,
-				43F82144223FB44500F2245A /* Face in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,8 +440,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43F82151223FB73D00F2245A /* Watch in Resources */,
-				43F82152223FB74000F2245A /* Face in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,8 +447,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43F8211D223FB03E00F2245A /* Assets.xcassets in Resources */,
-				43F8211B223FB03E00F2245A /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,7 +454,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43F8212F223FB03F00F2245A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +471,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430F1B832244EE5B008C26F0 /* FaceValues.swift in Sources */,
+				430F1B812244EE5B008C26F0 /* FaceEvaluation.swift in Sources */,
+				430F1B842244EE5B008C26F0 /* FaceState.swift in Sources */,
+				430F1B852244EE5B008C26F0 /* FaceController.swift in Sources */,
+				430F1B8F2244EE73008C26F0 /* HeartRateEvaluation.swift in Sources */,
+				430F1B8E2244EE73008C26F0 /* WatchManager.swift in Sources */,
+				430F1B822244EE5B008C26F0 /* FaceReader.swift in Sources */,
+				430F1B902244EE73008C26F0 /* WatchController.swift in Sources */,
+				430F1B872244EE5F008C26F0 /* OverallEvaluation.swift in Sources */,
+				430F1B912244EE73008C26F0 /* HeartRateProvider.swift in Sources */,
+				430F1B922244EE73008C26F0 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,9 +503,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43F8212D223FB03F00F2245A /* NotificationController.swift in Sources */,
-				43F8212B223FB03F00F2245A /* ExtensionDelegate.swift in Sources */,
-				43F82129223FB03F00F2245A /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,17 +530,6 @@
 			targetProxy = 43F82132223FB03F00F2245A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		43F82119223FB03E00F2245A /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				43F8211A223FB03E00F2245A /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		43E1669B2243B1BC000251E0 /* Debug */ = {
@@ -747,6 +713,7 @@
 		43F820FA223FAF4C00F2245A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -764,6 +731,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Amsiq.PhysicalDataReaderLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -772,6 +740,7 @@
 		43F820FB223FAF4C00F2245A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -797,6 +766,7 @@
 		43F820FD223FAF4C00F2245A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N426KG972D;
 				INFOPLIST_FILE = PhysicalDataReaderLibTests/Info.plist;
@@ -815,6 +785,7 @@
 		43F820FE223FAF4C00F2245A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N426KG972D;
 				INFOPLIST_FILE = PhysicalDataReaderLibTests/Info.plist;
@@ -917,7 +888,6 @@
 		43F8213A223FB03F00F2245A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N426KG972D;
@@ -936,7 +906,6 @@
 		43F8213B223FB03F00F2245A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N426KG972D;
