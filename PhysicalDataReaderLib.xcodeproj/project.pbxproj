@@ -12,7 +12,13 @@
 		43E166992243B1BB000251E0 /* WatchLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 43E166912243B1BB000251E0 /* WatchLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		43F820EF223FAF4C00F2245A /* PhysicalDataReaderLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F820E5223FAF4B00F2245A /* PhysicalDataReaderLib.framework */; };
 		43F820F6223FAF4C00F2245A /* PhysicalDataReaderLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F820E8223FAF4B00F2245A /* PhysicalDataReaderLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43F8211B223FB03E00F2245A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43F82119223FB03E00F2245A /* Interface.storyboard */; };
+		43F8211D223FB03E00F2245A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F8211C223FB03E00F2245A /* Assets.xcassets */; };
 		43F82124223FB03E00F2245A /* WatchExample Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 43F82123223FB03E00F2245A /* WatchExample Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		43F82129223FB03F00F2245A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F82128223FB03F00F2245A /* InterfaceController.swift */; };
+		43F8212B223FB03F00F2245A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F8212A223FB03F00F2245A /* ExtensionDelegate.swift */; };
+		43F8212D223FB03F00F2245A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F8212C223FB03F00F2245A /* NotificationController.swift */; };
+		43F8212F223FB03F00F2245A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F8212E223FB03F00F2245A /* Assets.xcassets */; };
 		43F82134223FB03F00F2245A /* WatchExample.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 43F82117223FB03E00F2245A /* WatchExample.app */; };
 		43F82142223FB08600F2245A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F82141223FB08600F2245A /* HealthKit.framework */; };
 		43F82144223FB44500F2245A /* Face in Resources */ = {isa = PBXBuildFile; fileRef = 43F82143223FB44500F2245A /* Face */; };
@@ -99,7 +105,17 @@
 		43F820EE223FAF4C00F2245A /* PhysicalDataReaderLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhysicalDataReaderLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F82103223FAFD700F2245A /* PhysicalDataReaderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhysicalDataReaderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F82117223FB03E00F2245A /* WatchExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43F8211A223FB03E00F2245A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		43F8211C223FB03E00F2245A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43F8211E223FB03E00F2245A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43F82123223FB03E00F2245A /* WatchExample Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchExample Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43F82128223FB03F00F2245A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		43F8212A223FB03F00F2245A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		43F8212C223FB03F00F2245A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		43F8212E223FB03F00F2245A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43F82130223FB03F00F2245A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43F82131223FB03F00F2245A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		43F8213D223FB07B00F2245A /* WatchExample Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchExample Extension.entitlements"; sourceTree = "<group>"; };
 		43F82141223FB08600F2245A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		43F82143223FB44500F2245A /* Face */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Face; sourceTree = "<group>"; };
 		43F82145223FB45B00F2245A /* Watch */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Watch; sourceTree = "<group>"; };
@@ -161,6 +177,8 @@
 			children = (
 				43E166892243A2C1000251E0 /* PhysicalDataReaderExample.entitlements */,
 				43F820E7223FAF4B00F2245A /* PhysicalDataReaderLib */,
+				43F82118223FB03E00F2245A /* WatchExample */,
+				43F82127223FB03F00F2245A /* WatchExample Extension */,
 				43E166922243B1BB000251E0 /* WatchLib */,
 				43F820E6223FAF4B00F2245A /* Products */,
 				43F8213E223FB07B00F2245A /* Frameworks */,
@@ -189,6 +207,30 @@
 				43F820E9223FAF4B00F2245A /* Info.plist */,
 			);
 			path = PhysicalDataReaderLib;
+			sourceTree = "<group>";
+		};
+		43F82118223FB03E00F2245A /* WatchExample */ = {
+			isa = PBXGroup;
+			children = (
+				43F82119223FB03E00F2245A /* Interface.storyboard */,
+				43F8211C223FB03E00F2245A /* Assets.xcassets */,
+				43F8211E223FB03E00F2245A /* Info.plist */,
+			);
+			path = WatchExample;
+			sourceTree = "<group>";
+		};
+		43F82127223FB03F00F2245A /* WatchExample Extension */ = {
+			isa = PBXGroup;
+			children = (
+				43F8213D223FB07B00F2245A /* WatchExample Extension.entitlements */,
+				43F82128223FB03F00F2245A /* InterfaceController.swift */,
+				43F8212A223FB03F00F2245A /* ExtensionDelegate.swift */,
+				43F8212C223FB03F00F2245A /* NotificationController.swift */,
+				43F8212E223FB03F00F2245A /* Assets.xcassets */,
+				43F82130223FB03F00F2245A /* Info.plist */,
+				43F82131223FB03F00F2245A /* PushNotificationPayload.apns */,
+			);
+			path = "WatchExample Extension";
 			sourceTree = "<group>";
 		};
 		43F8213E223FB07B00F2245A /* Frameworks */ = {
@@ -433,6 +475,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F8211D223FB03E00F2245A /* Assets.xcassets in Resources */,
+				43F8211B223FB03E00F2245A /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +484,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F8212F223FB03F00F2245A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +523,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F8212D223FB03F00F2245A /* NotificationController.swift in Sources */,
+				43F8212B223FB03F00F2245A /* ExtensionDelegate.swift in Sources */,
+				43F82129223FB03F00F2245A /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +553,17 @@
 			targetProxy = 43F82132223FB03F00F2245A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		43F82119223FB03E00F2245A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43F8211A223FB03E00F2245A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		43E1669B2243B1BC000251E0 /* Debug */ = {
@@ -858,6 +917,7 @@
 		43F8213A223FB03F00F2245A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N426KG972D;
@@ -876,6 +936,7 @@
 		43F8213B223FB03F00F2245A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N426KG972D;
