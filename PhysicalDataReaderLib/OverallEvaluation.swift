@@ -20,15 +20,33 @@ public enum OverallResult {
 public class OverallEvaluation   {
     var totalScore = 0
     
-    public func overallEvaluation(facedata: FaceEvaluationData, heartdata: HeartEvaluationData ) {
-         let smilePercentage = facedata.getNumberOfExpression(expression: .smiling, percentage: true)
-        let heart = heartdata.increaseHR
+    public func overallEvaluation(facedata: FaceEvaluationData, heartdata: HeartEvaluationData ) -> OverallResult {
         
+        let smilePercentage = facedata.getNumberOfExpression(expression: .smiling, percentage: true)
+        //let heart = heartdata.increaseHR
+        
+        if let smile = smilePercentage {
+            switch smile   {
+            case 0...5:
+                return .very_bad
+            case 5...10:
+                return .bad
+            case 10...20:
+                return .average
+            case 20...40:
+                return .good
+            case 40...100:
+                return .very_good
+            default:
+                return .average
+            }
+            
+        }
+        return .average
     }
     
     
-    public func cooleval() -> OverallResult  {
-        
+    private func cooleval() -> OverallResult  {
         
         switch self.totalScore {
         case 0...10:
@@ -44,9 +62,5 @@ public class OverallEvaluation   {
         default:
             return .average
         }
-        
-        
     }
-    
-    
 }

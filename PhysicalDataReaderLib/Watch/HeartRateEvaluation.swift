@@ -42,6 +42,6 @@ class HeartRateEvaluation {
     
 }
 public struct HeartEvaluationData {
-    var averageHR: Int?
-    var increaseHR: Int?
+   public var averageHR: Int?
+   public var increaseHR: Int?
 }

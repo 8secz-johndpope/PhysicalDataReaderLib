@@ -26,6 +26,8 @@ public class SessionManager: NSObject {
     }
     
     func start() {
+        if (session != nil) { return }
+        
            debugPrint("Sesssion started")
         let heartConfiguration = HKWorkoutConfiguration()
         heartConfiguration.activityType = .other

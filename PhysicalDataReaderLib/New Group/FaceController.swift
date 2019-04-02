@@ -7,12 +7,10 @@
 //
 #if canImport(ARKit)
 import ARKit
-
 import Foundation
 
-
 public protocol FaceDelegate: class {
-    func detectExpression(expression: String) 
+    func detectExpression(expression: FaceState)
     func didDetectFace(detected: Bool)
 }
 
@@ -31,7 +29,7 @@ public class FaceController: NSObject {
     
      public func startSession() {
         self.evaluator = FaceEvaluation()
-        guard ARFaceTrackingConfiguration.isSupported else { print("Get True Depth noob" ); return }
+        guard ARFaceTrackingConfiguration.isSupported else { print("Camera is not True Depth supported" ); return }
         let configuration = ARFaceTrackingConfiguration()
         self.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
@@ -42,14 +40,13 @@ public class FaceController: NSObject {
     }
 }
     // MARK: ARSession Delegate
-
     extension FaceController: ARSessionDelegate {
         
        public func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
             let result = self.reader.intelligentFaceDecoding(anchors: anchors)
             
             self.evaluator.addExpression(expression: result)
-            self.faceDelegate?.detectExpression(expression: result.rawValue)
+            self.faceDelegate?.detectExpression(expression: result)
         }
         
        public func session(_ session: ARSession, didUpdate frame: ARFrame) {

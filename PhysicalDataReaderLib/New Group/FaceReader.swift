@@ -49,7 +49,7 @@ class FaceReader: NSObject {
     
     private func isSurprised() -> Bool {
         guard let eyebrowsRaised = self.face?.blendShapes[.browInnerUp] else { return false }
-        return eyebrowsRaised.floatValue > 0.7
+        return eyebrowsRaised.floatValue > EYEBROW_VALUE
     }
     
      func isFaceTracked() -> Bool {
