@@ -28,12 +28,12 @@ public class SessionManager: NSObject {
     func start() {
         if (session != nil) { return }
         
-           debugPrint("Sesssion started")
+        debugPrint("Sesssion started")
         let heartConfiguration = HKWorkoutConfiguration()
         heartConfiguration.activityType = .other
         
         do {
-           self.session = try HKWorkoutSession(configuration: heartConfiguration)
+            self.session = try HKWorkoutSession(configuration: heartConfiguration)
         } catch {
             fatalError("Unable to create Workout Session!")
         }
@@ -48,8 +48,8 @@ public class SessionManager: NSObject {
 }
 // MARK: - Heart Rate Delegate
 extension SessionManager: HeartRateProviderDelegate {
-   public func heartRate(didChangeTo newHeartRate: Double) {
-       self.delegate?.sessionManager(self, didChangeHeartRateTo: newHeartRate)
+    public func heartRate(didChangeTo newHeartRate: Double) {
+        self.delegate?.sessionManager(self, didChangeHeartRateTo: newHeartRate)
     }
     
 }

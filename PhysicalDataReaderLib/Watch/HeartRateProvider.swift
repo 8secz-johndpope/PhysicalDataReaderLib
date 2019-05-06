@@ -22,9 +22,9 @@ class HeartRateProvider {
     private var activeQueries = [HKQuery]()
     
     init() {
-       self.requestAuthorization { (success) in
+        self.requestAuthorization { (success) in
             print(success)
-       }
+        }
     }
     
     func start() {
@@ -38,15 +38,12 @@ class HeartRateProvider {
         let queryPredicate = NSCompoundPredicate(andPredicateWithSubpredicates:[datePredicate, devicePredicate])
         
         let updateHandler: HKQueryUpdateHandler = { [weak self] query, samples, deletedObjects, queryAnchor, error in
-           
+            
             if let quantitySamples = samples as? [HKQuantitySample] {
                 self?.process(samples: quantitySamples)
             }
         }
-        let query = HKAnchoredObjectQuery(type: quantityType,
-                                          predicate: queryPredicate,
-                                          anchor: nil,
-                                          limit: HKObjectQueryNoLimit,
+        let query = HKAnchoredObjectQuery(type: quantityType, predicate: queryPredicate, anchor: nil, limit: HKObjectQueryNoLimit,
                                           resultsHandler: updateHandler)
         query.updateHandler = updateHandler
         
@@ -60,7 +57,6 @@ class HeartRateProvider {
     }
     
     private func process(samples: [HKQuantitySample]) {
-        
         samples.forEach { processHR(sample: $0) }
     }
     
@@ -74,7 +70,7 @@ class HeartRateProvider {
         self.delegate?.heartRate(didChangeTo: count)
     }
     
-     func requestAuthorization(completionHandler: @escaping ((_ success: Bool) -> Void)) {
+    func requestAuthorization(completionHandler: @escaping ((_ success: Bool) -> Void)) {
         
         if !HKHealthStore.isHealthDataAvailable() {
             print("no healthdata.")

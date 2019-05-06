@@ -24,7 +24,7 @@ public class WatchManager: NSObject {
         self.sessionManager.delegate = self
         self.session.delegate = self
         self.session.activate()
-    
+        
     }
     
     private func sendToApp(count: Double) {
@@ -35,11 +35,14 @@ public class WatchManager: NSObject {
             print("Phone is not reachable")
         }
     }
+    public func forceStart(){
+        self.sessionManager.start()
+    }
     
 }
 extension WatchManager: SessionManagerDelegate {
     
-   public func sessionManager(_ manager: SessionManager, didChangeHeartRateTo newHeartRate: Double) {
+    public func sessionManager(_ manager: SessionManager, didChangeHeartRateTo newHeartRate: Double) {
         self.sendToApp(count: newHeartRate)
         self.delegate?.getLatestHeartRate(newHeartRate: newHeartRate)
     }
@@ -49,6 +52,11 @@ extension WatchManager: WCSessionDelegate {
     public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {}
     
     public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        
+        if let message = message["Setup"] as? String {
+            print("lets:  \(message)")
+            self.sessionManager.start()
+        }
         if let message = message["Start"] as? String {
             self.sessionManager.start()
             print("hello  \(message)")

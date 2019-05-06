@@ -17,43 +17,46 @@ public protocol FaceDelegate: class {
 public class FaceController: NSObject {
     
     private weak var faceDelegate: FaceDelegate?
-    private var evaluator:FaceEvaluation!
-    private var reader = FaceReader ()
-    private var session: ARSession!
+    private var evaluator:FaceEvaluation?
+    private var reader = FaceReader()
+    private var session: ARSession?
     
     public func setup(delegate: FaceDelegate) {
         self.session = ARSession()
-        self.session.delegate = self
+        self.session?.delegate = self
         self.faceDelegate = delegate
     }
     
-     public func startSession() {
+    public func startSession() {
         self.evaluator = FaceEvaluation()
         guard ARFaceTrackingConfiguration.isSupported else { print("Camera is not True Depth supported" ); return }
         let configuration = ARFaceTrackingConfiguration()
-        self.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        self.session?.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
     
-     public func stopSession() -> FaceEvaluationData {
-        self.session.pause()
-        return self.evaluator.evaluateSession()
+    public func stopSession() -> FaceEvaluationData? {
+        self.session?.pause() // THIS CAN CAUSE CRASH - PROLLY NO MORE
+        return self.evaluator?.evaluateSession() // THIS CAN CAUSE CRASH
     }
 }
-    // MARK: ARSession Delegate
-    extension FaceController: ARSessionDelegate {
+// MARK: ARSession Delegate
+extension FaceController: ARSessionDelegate {
+    
+    public func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
+        let result = self.reader.intelligentFaceDecoding(anchors: anchors)
         
-       public func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
-            let result = self.reader.intelligentFaceDecoding(anchors: anchors)
-            
-            self.evaluator.addExpression(expression: result)
-            self.faceDelegate?.detectExpression(expression: result)
-        }
+        self.evaluator?.addExpression(expression: result)
+        self.faceDelegate?.detectExpression(expression: result)
         
-       public func session(_ session: ARSession, didUpdate frame: ARFrame) {
-             let isFaceTracked = self.reader.isFaceTracked()
-        
-            self.faceDelegate?.didDetectFace(detected: isFaceTracked)
-        }
-  
     }
+    
+    public func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        let isFaceTracked = self.reader.isFaceTracked()
+        if !isFaceTracked {
+            self.evaluator?.addExpression(expression: .not_determined)
+        }
+        
+        self.faceDelegate?.didDetectFace(detected: isFaceTracked)
+    }
+}
 #endif

@@ -16,51 +16,72 @@ public enum OverallResult {
     case very_bad
 }
 
-
-public class OverallEvaluation   {
-    var totalScore = 0
+public class OverallEvaluation: NSObject   {
     
-    public func overallEvaluation(facedata: FaceEvaluationData, heartdata: HeartEvaluationData ) -> OverallResult {
+    public func overallEvaluation(facedata: FaceEvaluationData?, heartdata: HeartEvaluationData? ) -> OverallResult {
+        var score = 0
         
-        let smilePercentage = facedata.getNumberOfExpression(expression: .smiling, percentage: true)
-        //let heart = heartdata.increaseHR
-        
-        if let smile = smilePercentage {
-            switch smile   {
-            case 0...5:
-                return .very_bad
-            case 5...10:
-                return .bad
-            case 10...20:
-                return .average
-            case 20...40:
-                return .good
-            case 40...100:
-                return .very_good
-            default:
-                return .average
-            }
-            
+        if let smilePercentage = facedata?.getNumberOfExpression(expression: .smiling, percentage: true) {
+            debugPrint("Smile: \(smilePercentage)")
+            // fix surprise
+            score += self.scoreCalculatorFace(number: smilePercentage)
         }
-        return .average
-    }
-    
-    
-    private func cooleval() -> OverallResult  {
+        if let heartRaise = heartdata?.increaseHR {
+            debugPrint("heartRaise: \(heartRaise)")
+            score += self.scoreCalculatorHR(number: heartRaise)
+        } else {
+            score *= 2 // if wactch not used
+        }
         
-        switch self.totalScore {
-        case 0...10:
+        debugPrint("TotalScore: \(score)")
+        switch score {
+        case 0...5:
             return .very_bad
-        case 11...33:
+        case 5...10:
             return .bad
-        case 34...50:
+        case 10...25:
             return .average
-        case 50...75:
+        case 25...50:
             return .good
-        case 75...100:
+        case 50...100:
             return .very_good
         default:
             return .average
         }
+    }
+    
+    private func scoreCalculatorFace(number: Int)-> Int{
+        switch number {
+        case 1...10:
+            return 10
+        case 10...25:
+            return 20
+        case 25...50:
+            return 30
+        case 50...75:
+            return 40
+        case 75...100:
+            return 50
+        default:
+            return  0
+        }
+    }
+    
+    private func scoreCalculatorHR(number: Int)-> Int{
+        switch number {
+        case 1...2:
+            return 10
+        case 2...4:
+            return 20
+        case 4...6:
+            return 30
+        case 6...10:
+            return 40
+        case 10...100:
+            return 50
+        default:
+            return 0
+        }
+        
     }
 }

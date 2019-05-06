@@ -8,11 +8,13 @@
 
 import Foundation
 
-class HeartRateEvaluation {
+public class HeartRateEvaluation {
     
-    var heartRates: [Int] = []
+    public init(){}
     
-    func evaluateSession() -> HeartEvaluationData {
+   public var heartRates: [Int] = []
+    
+    public func evaluateSession() -> HeartEvaluationData {
         
         let evaluationData = HeartEvaluationData (
             averageHR: self.getAverageHeartRate(),
@@ -31,17 +33,17 @@ class HeartRateEvaluation {
         return sum / self.heartRates.count
     }
     
-    private func getIncreaseInHr() -> Int {
-           if let maxVal = self.heartRates.max() {
-            let startValue = heartRates[1] // using second index since first sometimes is off
+    private func getIncreaseInHr() -> Int? {
+        if let maxVal = self.heartRates.max() {
+            let startValue = heartRates[0] // using second index since first sometimes is off
             let difference = maxVal - startValue
             return difference
         }
-        return 0
+        return nil
     }
     
 }
 public struct HeartEvaluationData {
-   public var averageHR: Int?
-   public var increaseHR: Int?
+    public var averageHR: Int?
+    public var increaseHR: Int?
 }

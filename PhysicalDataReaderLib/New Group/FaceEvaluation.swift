@@ -8,52 +8,50 @@
 
 import Foundation
 
-class FaceEvaluation {
+public class FaceEvaluation {
     
-    private var counts: [String: Int] = [:]
+    private var counts: [FaceState: Int] = [:]
     private var totalCount = 0
     private var lastExpression: FaceState?
     private var specialCases: [FaceState] = [.winking, .tongue_out]
+
+    public init(){}
     
-    func addExpression(expression: FaceState) {
+    public func addExpression(expression: FaceState) {
         
-        if specialCases.contains(expression) && specialCases.contains(self.lastExpression ?? .not_determined) {
-            return
+        if self.specialCases.contains(expression) && self.specialCases.contains(self.lastExpression ?? .not_determined) {
+            return // this is made to not fill dict with winking and tongoue out.
         }
         
-        self.counts[expression.rawValue, default: 0] += 1
+        self.counts[expression, default: 0] += 1
         self.totalCount += 1
         self.lastExpression = expression
     }
     
-    func evaluateSession() -> FaceEvaluationData {
+    public func evaluateSession() -> FaceEvaluationData? {
         
         let evaluationData = FaceEvaluationData (
-        totalExpressions: self.totalCount,
-        mostUsed: counts.max { a, b in a.value < b.value }?.key,
-        counts: self.counts
+            totalExpressions: self.totalCount,
+            mostUsed: counts.max { a, b in a.value < b.value }?.key,
+            counts: self.counts
         )
         return evaluationData
-    }
-    
-    private func specialExpression() -> Bool {
-        return true
     }
 }
 
 public struct FaceEvaluationData {
     var totalExpressions: Int?
-    var mostUsed: String?
-    var counts: [String: Int]?
+    public var mostUsed: FaceState?
+    var counts: [FaceState: Int]?
     
-   public func getNumberOfExpression(expression: FaceState, percentage:Bool) -> Int? {
-        if let counts = self.counts, let value = counts[expression.rawValue], let total = self.totalExpressions {
-             return percentage ? getPercentage(value, total) : value
+    public func getNumberOfExpression(expression: FaceState, percentage:Bool) -> Int? {
+        if let counts = self.counts, let value = counts[expression], let total = self.totalExpressions {
+            return percentage ? getPercentage(value, total) : value
         } else { return 0 }
     }
     
     private func getPercentage(_ value: Int, _ max: Int) -> Int {
         return Int((Double(value) / Double(max)) * 100.0 )
     }
-  
+    
 }

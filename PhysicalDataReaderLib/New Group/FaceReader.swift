@@ -15,9 +15,9 @@ class FaceReader: NSObject {
     
     private var face: ARFaceAnchor?
     func intelligentFaceDecoding(anchors: [ARAnchor]) -> FaceState {
-    
+        
         if let faceAnchor = anchors.first as? ARFaceAnchor { self.face = faceAnchor }
-
+        
         if self.isSmiling() {
             return .smiling
         } else if self.isFrowning() {
@@ -28,7 +28,7 @@ class FaceReader: NSObject {
             return .tongue_out
         } else if self.isSurprised() {
             return .surprised
-    }
+        }
         return .neutral
     }
     
@@ -52,7 +52,7 @@ class FaceReader: NSObject {
         return eyebrowsRaised.floatValue > EYEBROW_VALUE
     }
     
-     func isFaceTracked() -> Bool {
+    func isFaceTracked() -> Bool {
         if let isFaceTracked = self.face?.isTracked {
             return isFaceTracked
         }
