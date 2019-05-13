@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PhysicalDataReaderLib"
-  spec.version      = "0.1.4"
-  spec.summary      = "My awesome pod."
+  spec.version      = "0.1.5"
+  spec.summary      = "OLL's awesome pod."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
