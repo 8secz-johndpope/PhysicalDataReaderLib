@@ -12,8 +12,6 @@ import PhysicalDataReaderLib
 
 class TestWatchLib: XCTestCase {
 
-
-
     func testEvaluatorWatchAverageHR() {
         let HR_eval = HeartRateEvaluation()
         

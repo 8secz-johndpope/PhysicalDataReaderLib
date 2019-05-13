@@ -25,7 +25,7 @@ public class SessionManager: NSObject {
         self.heartRateProvider.delegate = self
     }
     
-    func start() {
+    func startWorkout() {
         if (session != nil) { return }
         
         debugPrint("Sesssion started")
@@ -39,7 +39,7 @@ public class SessionManager: NSObject {
         }
         
         self.healthStore.start(session!)
-        self.heartRateProvider.start()
+        self.heartRateProvider.startQuery()
         
     }
     func stop() {

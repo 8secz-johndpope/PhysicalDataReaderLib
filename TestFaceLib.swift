@@ -11,7 +11,6 @@ import PhysicalDataReaderLib
 
 class TestFaceLib: XCTestCase {
 
- 
     func testEvaluatorFacePercentage() {
         let faceEval = FaceEvaluation()
         

@@ -120,8 +120,6 @@
 /* Begin PBXFileReference section */
 		43048A442247D98300954332 /* PhysicalDataReader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhysicalDataReader.entitlements; sourceTree = "<group>"; };
 		4324863C2280820200369B4E /* PhysicalDataReaderLibTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PhysicalDataReaderLibTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		432486452280827400369B4E /* PhysicalDataReaderLibUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalDataReaderLibUnitTests.swift; sourceTree = "<group>"; };
-		432486472280827400369B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		432486542280846100369B4E /* PhysicalDataReaderLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhysicalDataReaderLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		432486562280846100369B4E /* PhysicalDataReaderLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicalDataReaderLibTests.swift; sourceTree = "<group>"; };
 		432486582280846100369B4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -230,15 +228,6 @@
 			path = Watch;
 			sourceTree = "<group>";
 		};
-		432486442280827400369B4E /* PhysicalDataReaderLibUnitTests */ = {
-			isa = PBXGroup;
-			children = (
-				432486452280827400369B4E /* PhysicalDataReaderLibUnitTests.swift */,
-				432486472280827400369B4E /* Info.plist */,
-			);
-			path = PhysicalDataReaderLibUnitTests;
-			sourceTree = "<group>";
-		};
 		432486552280846100369B4E /* PhysicalDataReaderLibTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,7 +255,6 @@
 				43F82118223FB03E00F2245A /* WatchExample */,
 				43F82127223FB03F00F2245A /* WatchExample Extension */,
 				43E166922243B1BB000251E0 /* WatchLib */,
-				432486442280827400369B4E /* PhysicalDataReaderLibUnitTests */,
 				432486552280846100369B4E /* PhysicalDataReaderLibTests */,
 				43F820E6223FAF4B00F2245A /* Products */,
 				43F8213E223FB07B00F2245A /* Frameworks */,

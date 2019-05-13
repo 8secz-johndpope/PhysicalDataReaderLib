@@ -27,7 +27,7 @@ class HeartRateProvider {
         }
     }
     
-    func start() {
+    func startQuery() {
         debugPrint("HR start")
         // need hr
         guard let quantityType = HKObjectType.quantityType(forIdentifier: .heartRate) else { return }

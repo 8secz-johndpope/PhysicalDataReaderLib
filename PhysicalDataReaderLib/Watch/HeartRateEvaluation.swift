@@ -9,10 +9,9 @@
 import Foundation
 
 public class HeartRateEvaluation {
+      public var heartRates: [Int] = []
     
     public init(){}
-    
-   public var heartRates: [Int] = []
     
     public func evaluateSession() -> HeartEvaluationData {
         
@@ -35,7 +34,7 @@ public class HeartRateEvaluation {
     
     private func getIncreaseInHr() -> Int? {
         if let maxVal = self.heartRates.max() {
-            let startValue = heartRates[0] // using second index since first sometimes is off
+            let startValue = heartRates[0]
             let difference = maxVal - startValue
             return difference
         }

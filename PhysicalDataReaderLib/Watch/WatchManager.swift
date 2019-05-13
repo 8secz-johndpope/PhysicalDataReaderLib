@@ -36,7 +36,7 @@ public class WatchManager: NSObject {
         }
     }
     public func forceStart(){
-        self.sessionManager.start()
+        self.sessionManager.startWorkout()
     }
     
 }
@@ -55,10 +55,10 @@ extension WatchManager: WCSessionDelegate {
         
         if let message = message["Setup"] as? String {
             print("lets:  \(message)")
-            self.sessionManager.start()
+            self.sessionManager.startWorkout()
         }
         if let message = message["Start"] as? String {
-            self.sessionManager.start()
+            self.sessionManager.startWorkout()
             print("hello  \(message)")
         } else if let message = message["End"] as? String {
             self.sessionManager.stop()
